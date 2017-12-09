@@ -1,0 +1,34 @@
+<h1>List of Registrations</h1>
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Profile_pic</th>
+  </tr>
+ 
+  <% @registrations.each do |registration| %>
+    <tr >
+      <td><%= registration.name %></td>
+      <td><%= registration.address %></td>
+      <td><%= registration.phone %></td>
+      <td><%= registration.gender %></td>
+      <td><%= registration.email %></td>
+      <td><%= registration.password %></td>
+      <td><%= registration.profile_pic %></td>
+        <th colspan="2"></th>
+      <td><%= link_to 'Show', registration_path(registration) %></td>
+      <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+       <td><%= link_to 'Destroy', registration_path(registration),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+      
+
+
+

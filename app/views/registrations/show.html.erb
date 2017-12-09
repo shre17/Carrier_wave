@@ -1,0 +1,38 @@
+<p>
+  <strong>Name:</strong>
+  <%= @registration.name %>
+</p>
+ 
+<p>
+  <strong>Address:</strong>
+  <%= @registration.address %>
+</p>
+ 
+ <p>
+  <strong>Phone:</strong>
+  <%= @registration.phone %>
+</p>
+ 
+ <p>
+  <strong>Gender:</strong>
+  <%= @registration.gender%>
+</p>
+ 
+ <p>
+  <strong>Email:</strong>
+  <%= @registration.email %>
+</p>
+ 
+ <p>
+  <strong>Password:</strong>
+  <%= @registration.password %>
+</p>
+
+<p>
+  <strong>Profile_pic:</strong>
+  <%= image_tag @registration.profile_pic.url, size: "200x200"%>
+</p>
+ 
+ <%= link_to 'show all', registrations_path %><br />
+ <%= link_to 'Edit', edit_registration_path(@registration) %><br />
+ |<%= link_to 'Back', new_registration_path %>
